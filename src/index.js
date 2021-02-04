@@ -11,8 +11,11 @@ class Square extends React.Component {
     }
     render() {
       return (
-        <button className="square" onClick={() => { alert('click'); }}>
-          {this.props.value}
+        <button
+          className="square"
+          onClick={() => this.setState({value: 'X'})} //re-render the square whenever its <button> is clicked
+        >
+          {this.state.value}
         </button>
       );
     }
